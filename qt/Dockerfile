@@ -29,7 +29,7 @@ RUN \
   $GOPATH/bin/qtsetup check linux && \
   $GOPATH/bin/qtsetup generate linux && \
   $GOPATH/bin/qtsetup install linux && \
-  apt-get remove --allow-remove-essential --purge $BUILD_PACKAGES && \
+  apt-get remove -yq --allow-remove-essential --purge $BUILD_PACKAGES && \
   apt-get autoremove -yq && \
   rm -f /tmp/$QT && \
   rm -rf $GOPATH/src/golang.org/ && \
