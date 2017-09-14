@@ -1,11 +1,36 @@
 # docker
-All of my docker environments
+All of my docker environments.  
 
 ## base
 Stable debian slim (~55.3MB)
 
 ```sh
 $ docker run -it tiggilyboo/base /bin/bash
+```
+
+## go
+Golang 1.9 on top of base (+527.4MB)
+
+```sh
+$ docker run --it tiggilyboo/go /bin/bash
+$ go version
+```
+
+Having issues cloning large git repos? You can increase your docker environments network adapter MTU by changing your docker daemon's parameters. `vim /lib/systemd/system/docker.service`, and adding the following:
+
+```diff
+...
+- ExecStart=/usr/bin/dockerd -H fd://
++ ExecStart=/usr/bin/dockerd -H fd:// --mtu=1400
+...
+```
+
+## qt
+Golang Qt on top of go (+)
+
+```sh
+$ docker run --it tiggilyboo/qt /bin/bash
+$
 ```
 
 ## node
@@ -19,6 +44,7 @@ $ node --version
 
 ## cordova
 Latest cordova 7.0.1 on top of node (+65MB)
+
 By default turns off telemetry
 
 ```sh
@@ -28,6 +54,7 @@ $ cordova --version
 
 ## android
 Contains OpenJDK 1.8.0_141, Android tools 25.2.5, Gradle 3.3, Android SDK 25 (7.0.1) (+1.03GB)
+
 Symbolic link on `java` to `javac`
 
 ```sh
