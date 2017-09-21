@@ -16,7 +16,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
     QT_QPA_PLATFORM=minimal \
     QT_DIR=/opt/Qt \
     QT_DOCKER=true \
-    QT_REPO=github.com/therecipe/qt
+    QT_REPO=github.com/tiggilyboo/qt
 
 RUN \
   apt-get update -qq && \

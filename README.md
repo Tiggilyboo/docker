@@ -26,7 +26,7 @@ Having issues cloning large git repos? You can increase your docker environments
 ```
 
 ## qt
-Golang Qt on top of go (+)
+Golang Qt5 on top of go (+2.9GB)
 
 ```sh
 $ docker run --it tiggilyboo/qt /bin/bash

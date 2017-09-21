@@ -19,6 +19,6 @@ RUN \
   apt-get autoremove -yq && \
   rm -rf /var/lib/apt/lists && \
   rm -rf /var/cache/apt && \
-  ln -s /home/user/work $GOPATH
+  cd / && ln -s /home/user/work $GOPATH
 
 CMD ["/bin/bash"]
