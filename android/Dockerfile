@@ -11,7 +11,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
     ANDROID_HOME=/usr/local/android-sdk-linux \
     ANDROID_PACKAGES="tools,platform-tools,build-tools-26.0.1,android-25,extra" \
     GRADLE_VERSION=3.3 \
-    GRADLE_HOME=/src/gradle
+    GRADLE_HOME=/srv/gradle
 
 ENV JAVA_HOME=$JAVA_ROOT \
 		PATH=$PATH:$JAVA_ROOT/jdk/bin:$JAVA_ROOT:$GRADLE_HOME/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
