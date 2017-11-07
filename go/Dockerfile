@@ -9,7 +9,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
     PATH="$PATH:/usr/local/go/bin"
 
 RUN \
-  mkdir $GOPATH && cd $GOPATH && \
+  mkdir -p $GOPATH && cd $GOPATH && \
   apt-get -qq update -qq && \
   apt-get -y -qq --no-install-recommends install $INSTALL_PACKAGES && \
   curl -sL --retry 10 --retry-delay 10 -o /tmp/go$GO_VERSION.linux-amd64.tar.gz \
@@ -19,6 +19,6 @@ RUN \
   apt-get autoremove -yq && \
   rm -rf /var/lib/apt/lists && \
   rm -rf /var/cache/apt && \
-  cd / && ln -s /home/user/work $GOPATH
+  cd $GOPATH 
 
 CMD ["/bin/bash"]
