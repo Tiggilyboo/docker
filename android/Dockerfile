@@ -10,7 +10,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
     JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8" \
     ANDROID_VERSION=25.2.5 \
     ANDROID_HOME=/usr/local/android-sdk-linux \
-    ANDROID_PACKAGES="tools,platform-tools,build-tools,android-25,extra" \
+    ANDROID_PACKAGES="tools;android-26,platform-tools;android-26,build-tools;android-26,android-26,extra" \
     GRADLE_VERSION=3.3 \
     GRADLE_HOME=/srv/gradle
 
