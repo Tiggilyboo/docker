@@ -1,4 +1,4 @@
-FROM tiggilyboo/android
+FROM tiggilyboo/cordova
 LABEL description="Ionic"
 MAINTAINER Simon Willshire <me@simonwillshire.com>
 

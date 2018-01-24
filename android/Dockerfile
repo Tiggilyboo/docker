@@ -1,11 +1,11 @@
-FROM tiggilyboo/cordova
+FROM tiggilyboo/ionic
 LABEL description="Oracle Java 8, Android SDK"
 MAINTAINER Simon Willshire <me@simonwillshire.com>
 
 ENV DEBIAN_FRONTEND=noninteractive \
-    INIT_PACKAGES="curl unzip ca-certificates" \
+    INIT_PACKAGES="curl unzip ca-certificates python" \
     BUILD_PACKAGES="" \
-    JAVA_FILE=jdk-8u151-linux-x64.tar.gz \
+    JAVA_FILE=jdk-8u161-linux-x64.tar.gz \
 		JAVA_ROOT=/srv/java \ 
     JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8" \
     ANDROID_VERSION=25.2.5 \
@@ -19,7 +19,7 @@ ENV JAVA_HOME=$JAVA_ROOT \
 
 RUN \
   apt-get update && apt-get install --no-install-recommends -y $INIT_PACKAGES $BUILD_PACKAGES && \
-  curl -C - -L -O -# -H "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/$JAVA_FILE" && \
+  curl -C - -L -O -# -H "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/$JAVA_FILE" && \
   mkdir -p /srv/java && \
   tar xzf $JAVA_FILE -C $JAVA_ROOT --strip-components=1 && \
   rm -f $JAVA_FILE && \
