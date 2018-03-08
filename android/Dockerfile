@@ -30,7 +30,7 @@ RUN \
   unzip -q -d $GRADLE_HOME/ ~/gradle.zip && \
   rm -f ~/*.zip && \
 	chown -R root $ANDROID_HOME && \
-  ( sleep 5 && while [ 1 ]; do sleep 1; echo y; done ) | \
+  ( sleep 8 && while [ 1 ]; do sleep 1; echo y; done ) | \
     $ANDROID_HOME/tools/android --clear-cache update sdk --no-ui -a --filter $ANDROID_PACKAGES && \
   apt-get remove --allow-remove-essential --purge -y $INIT_PACKAGES && \
   apt-get autoremove -y && \
