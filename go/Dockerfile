@@ -4,9 +4,9 @@ LABEL description="Golang"
 
 ENV DEBIAN_FRONTEND=noninteractive \
     INSTALL_PACKAGES="curl git ca-certificates openssl libssl1.1 g++ gcc libc6-dev make pkg-config" \
-    GO_VERSION="1.9" \
+    GO_VERSION="1.10" \
     GOPATH="/go" \
-    PATH="$PATH:/usr/local/go/bin"
+    PATH="$PATH:/usr/local/go/bin:/go/bin"
 
 RUN \
   mkdir -p $GOPATH && cd $GOPATH && \
