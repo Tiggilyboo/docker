@@ -5,7 +5,7 @@ MAINTAINER Simon Willshire <me@simonwillshire.com>
 ENV INSTALL_PACKAGES="curl git unzip ca-certificates openssl libssl1.1 lib32stdc++6" \
     FLUTTER_PATH="/usr/local" \
     FLUTTER_REPO="https://github.com/flutter/flutter.git" \
-    FLUTTER_BRANCH="beta"
+    FLUTTER_BRANCH="master"
 ENV PATH="$PATH:$FLUTTER_PATH/flutter/bin"
 
 RUN \
